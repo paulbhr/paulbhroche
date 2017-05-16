@@ -1,0 +1,168 @@
+<!doctype html>
+<html ng-app="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paul Roche - Développeur Web Junior</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://use.fontawesome.com/acd6178220.js"></script>
+</head>
+
+<body>
+  <nav>
+    <img src="logoplaceholder.jpg">
+    <h1>Paul Roche</h1>
+    <h2>Développeur Web Junior</h2>
+    <ul>
+      <li><a href="#edito">Accueil</a></li>
+      <li><a href="#realisations">Réalisations</a></li>
+      <li><a href="#cv">Curriculum Vitae</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <ul id="mobile">
+      <li ng-click="menu=!menu">Menu</li>
+      <li ng-show="menu" ng-click="menu=!menu"><a href="#edito">Accueil</a></li>
+      <li ng-show="menu" ng-click="menu=!menu"><a href="#realisations">Réalisations</a></li>
+      <li ng-show="menu" ng-click="menu=!menu"><a href="#cv">Curriculum Vitae</a></li>
+      <li ng-show="menu" ng-click="menu=!menu"><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div id="edito">
+    <h1>À Propos</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut aliquet dolor, sit amet facilisis est. Sed vel eleifend nisl. Ut luctus mi arcu, id tincidunt arcu dictum eget. Praesent eget augue aliquam, sagittis risus ac, ultrices sapien. Ut ac elit mauris. Aliquam dui arcu, facilisis faucibus arcu sit amet, dictum volutpat sapien. Suspendisse cursus, lorem mollis suscipit ultricies, velit sapien tempor enim, eget pharetra neque ex eget eros. Nunc vitae iaculis mauris, vel porttitor diam. Vivamus et blandit est. Etiam accumsan efficitur tellus, et euismod lacus porta nec. Nam tincidunt, ligula at volutpat molestie, magna erat tincidunt ligula, sed ullamcorper sem urna et elit. Ut ac tempus mauris. Praesent nec erat nisi. Nulla ullamcorper vel sem sit amet sodales. Pellentesque lorem lorem, tincidunt nec purus vitae, malesuada blandit neque. Suspendisse sodales lacus orci, cursus sodales ipsum sagittis ut. Proin efficitur congue risus vitae blandit. Nullam efficitur, libero nullam.
+    </p>
+  </div>
+
+  <div id="realisations">
+    <h1>Réalisations</h1>
+    <section>
+      <article ng-click="pokemain=!pokemain">
+        <img src="../pokemain/gallery/logo.png" alt="preview">
+        <h2>Pokémain</h2>
+        <h4>Pierre/Papier/Ciseaux : attrapez-les tous!</h4>
+        <p ng-show="pokemain">Lorem ipsum test. Pellentesque lorem lorem, tincidunt nec purus vitae, malesuada blandit neque. Suspendisse sodales lacus orci, cursus sodales ipsum sagittis ut. Proin efficitur congue risus vitae blandit. Nullam efficitur, libero nullam.</p>
+      </article>
+      <article ng-click="workbiche=!workbiche">
+        <img src="../workbiche/style/logo.png" alt="preview">
+        <h2>Work Biche!</h2>
+        <h4>Une To-Do List simple et intuitive.</h4>
+        <p ng-show="workbiche">Lorem ipsum test. Pellentesque lorem lorem, tincidunt nec purus vitae, malesuada blandit neque. Suspendisse sodales lacus orci, cursus sodales ipsum sagittis ut. Proin efficitur congue risus vitae blandit. Nullam efficitur, libero nullam.</p>
+      </article>
+    </section>
+  </div>
+
+  <div id="cv">
+    <h1>Curriculum Vitae</h1>
+    <section>
+      <article id="competences">
+        <button class="accordéon" ng-click="comp=!comp">
+          Compétences <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+        </button>
+        <div class="content" ng-show="comp">
+
+          <div class="back"><p style="width:95%">HTML5</p></div>
+          <div class="back"><p style="width:90%">CSS3</p></div>
+          <h6><i>Frameworks additionnels: SASS, Bootstrap</i></h6>
+          <div class="back"><p style="width:75%">PHP7</p></div>
+          <h6><i>Framework additionnel: Silex</i></h6>
+          <div class="back"><p style="width:70%">SQL</p></div>
+          <div class="back"><p style="width:65%">Javascript</p></div>
+          <h6><i>Frameworks additionnels: jQuery, Angular</i></h6>
+          <div class="back"><p style="width:95%">Suite Adobe</p></div>
+          <h6><i>Photoshop, Illustrator, InDesign</i></h6>
+          <div class="back"><p style="width:60%">Github</p></div>
+
+          <ul>
+            <li>Maîtrise des tags et leur utilisation appropriée</li>
+            <li>Gestion et mise en relation de bases de données</li>
+            <li>Réalisation de mini jeux vidéos en Javascript</li>
+            <li>Gestion des cookies et sessions</li>
+            <li>Mise en place d'un CMS</li>
+            <li>Design graphique : réalisation de logos et typographies</li>
+            <li>Mise en place et suivi d'un cahier des charges</li>
+          </ul>
+
+        </div>
+      </article>
+
+      <article id="professionnel">
+        <button class="accordéon" ng-click="parcpro=!parcpro">
+          Parcours Professionnel <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+        </button>
+        <div class="content" ng-show="parcpro">
+          <div class="back"><h4>Depuis 2013 : Graphiste Freelance</h4></div>
+          <p>Pour particuliers et entreprises (<b>Sosh</b>, <b>Modulor</b>, <b>Seeds</b>) : réalisation de logos, flyers et typographies.</p>
+          <div class="back"><h4>Depuis 2014 : Rédacteur Musical Web</h4></div>
+          <p><a>LesTambours</a> : dossiers, critiques, interviews, playlists, live reports, animation des réseaux sociaux (Facebook, Twitter).</p>
+          <div class="back"><h4>2014-16 : Vendeur</h4></div>
+          <p>Luxe (<b>Hogan</b>, <b>Tod's</b>), Prêt-à-Porter (<b>Maje</b>, <b>Armand Thiery</b>), Concept Store (<b>Fleux</b>).</p>
+          <div class="back"><h4>2013-14 : Assistant Opérationnel</h4></div>
+          <p><a>Videopolis</a>: Gestion, préparation et suivi des dossiers de duplication vidéo durant les Fashion Weeks.</p>
+        </div>
+      </article>
+
+      <article id="formation">
+        <button class="accordéon" ng-click="formation=!formation">
+          Formation <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+        </button>
+        <div class="content" ng-show="formation">
+          <div class="back"><h4>2016 : Simplon, Développeur Web</h4></div>
+          <p><b>Spécialité PHP</b>. Formation de 8 mois dont 1 mois de stage en entreprise.</p>
+          <div class="back"><h4>2012-13 : Préparation aux concours kiné</h4></div>
+          <p>CPES Paris.</p>
+          <div class="back"><h4>2010-12 : Première Années Études de Santé</h4></div>
+          <p>Université Paris Descartes.</p>
+          <div class="back"><h4>2010 : Bac S mention Bien, spécialité SVT</h4></div>
+          <p>Option Cinéma-Audiovisuel</p>
+
+          <p>
+            <b>Anglais :</b> Bilingue. FCE Grade A.</br>
+            <b>Espagnol :</b> Intermédiaire. Niveau scolaire.</br>
+            <b>Farsi :</b> notions à l'oral.
+          </p>
+        </div>
+      </article>
+
+      <article id="loisirs">
+        <button class="accordéon" ng-click="divers=!divers">
+          Loisirs <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+        </button>
+        <div class="content" ng-show="divers">
+          <div class="back"><h4>Musique</h4></div>
+            <p>Pratique du piano (5 ans) et de la guitare (7 ans), musique classique, rock & BO de films. <br> Expérience en DJing avec Traktor (disco, pop) et production avec Ableton Live.</p>
+          <br>
+          <div class="back"><h4>Rédaction Web</h4></div>
+            <p>Musicale (Les Tambours.com), depuis 2014, et Séries TV (Spin-Off.fr, de 2009 à 2011).</p>
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <div id="contact">
+    <h1>Contact</h1>
+    <form action="mailto:paulbh.roche@gmail.com" method="post">
+      <fieldset>
+        <input type="text" name="nom" placeholder="Nom">
+        <input type="text" name="prenom" placeholder="Prénom">
+        <br>
+        <input type="text" name="mail" placeholder="Mail">
+        <input type="text" name="tel" placeholder="Tel">
+      </fieldset>
+      <fieldset>
+        <input type="text" name="objet" placeholder="Objet">
+        <br>
+        <textarea name="contenu" placeholder="Contenu" rows="5" required></textarea>
+        <input type="submit" name="send" value="Envoyer">
+      </fieldset>
+    </form>
+    <ul>
+      <li><a href="https://github.com/paulbhr">Github</a></li>
+      <li><a href="https://www.linkedin.com/in/paul-roche-a74265142/">LinkedIn</a></li>
+    </ul>
+  </div>
+</body>
+</html>
