@@ -11,11 +11,11 @@
 </head>
 
 <body>
-  <nav>
+  <nav id="nav">
     <img src="logoplaceholder.jpg">
     <h1>Paul Roche</h1>
     <h2>Développeur Web Junior</h2>
-    <ul>
+    <ul id="web">
       <li><a href="#edito">Accueil</a></li>
       <li><a href="#realisations">Réalisations</a></li>
       <li><a href="#cv">Curriculum Vitae</a></li>
@@ -32,7 +32,7 @@
 
   <div id="edito">
     <h1>À Propos</h1>
-    <p>
+    <p id="editop">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut aliquet dolor, sit amet facilisis est. Sed vel eleifend nisl. Ut luctus mi arcu, id tincidunt arcu dictum eget. Praesent eget augue aliquam, sagittis risus ac, ultrices sapien. Ut ac elit mauris. Aliquam dui arcu, facilisis faucibus arcu sit amet, dictum volutpat sapien. Suspendisse cursus, lorem mollis suscipit ultricies, velit sapien tempor enim, eget pharetra neque ex eget eros. Nunc vitae iaculis mauris, vel porttitor diam. Vivamus et blandit est. Etiam accumsan efficitur tellus, et euismod lacus porta nec. Nam tincidunt, ligula at volutpat molestie, magna erat tincidunt ligula, sed ullamcorper sem urna et elit. Ut ac tempus mauris. Praesent nec erat nisi. Nulla ullamcorper vel sem sit amet sodales. Pellentesque lorem lorem, tincidunt nec purus vitae, malesuada blandit neque. Suspendisse sodales lacus orci, cursus sodales ipsum sagittis ut. Proin efficitur congue risus vitae blandit. Nullam efficitur, libero nullam.
     </p>
   </div>
@@ -59,22 +59,22 @@
     <h1>Curriculum Vitae</h1>
     <section>
       <article id="competences">
-        <button class="accordéon" ng-click="comp=!comp">
+        <button ng-click="comp=!comp" onclick="progress()">
           Compétences <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
         </button>
         <div class="content" ng-show="comp">
 
-          <div class="back"><p style="width:95%">HTML5</p></div>
-          <div class="back"><p style="width:90%">CSS3</p></div>
+          <div class="back"><p class="95">HTML5</p></div>
+          <div class="back"><p class="90">CSS3</p></div>
           <h6><i>Frameworks additionnels: SASS, Bootstrap</i></h6>
-          <div class="back"><p style="width:75%">PHP7</p></div>
+          <div class="back"><p class="75">PHP7</p></div>
           <h6><i>Framework additionnel: Silex</i></h6>
-          <div class="back"><p style="width:70%">SQL</p></div>
-          <div class="back"><p style="width:65%">Javascript</p></div>
+          <div class="back"><p class="70">SQL</p></div>
+          <div class="back"><p class="65">Javascript</p></div>
           <h6><i>Frameworks additionnels: jQuery, Angular</i></h6>
-          <div class="back"><p style="width:95%">Suite Adobe</p></div>
+          <div class="back"><p class="95">Suite Adobe</p></div>
           <h6><i>Photoshop, Illustrator, InDesign</i></h6>
-          <div class="back"><p style="width:60%">Github</p></div>
+          <div class="back"><p class="60">Github</p></div>
 
           <ul>
             <li>Maîtrise des tags et leur utilisation appropriée</li>
@@ -165,4 +165,5 @@
     </ul>
   </div>
 </body>
+<script src="script.js"></script>
 </html>

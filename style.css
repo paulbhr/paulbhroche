@@ -16,7 +16,7 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background: #F4F5E4; }
+  background: #F4F4F4; }
 
 a {
   text-decoration: none;
@@ -24,6 +24,9 @@ a {
 
 nav {
   position: fixed;
+  background: #F4F4F4;
+  z-index: 1;
+  right: 25px;
   height: 100%;
   width: 25%;
   display: flex;
@@ -32,7 +35,7 @@ nav {
   align-items: center;
   text-align: justify;
   padding: 5px;
-  margin-left: 1%; }
+  padding-left: 1%; }
   nav * {
     border: 5px solid #03040E;
     margin: 5px 0px;
@@ -55,7 +58,7 @@ nav {
     padding: 5px 15px; }
   nav h1 {
     background: #C21B11;
-    color: #F4F5E4;
+    color: #F4F4F4;
     margin-right: auto; }
   nav h2 {
     background: #F3EC01;
@@ -64,12 +67,12 @@ nav {
     margin-bottom: 50px; }
   nav ul {
     width: 100%;
+    display: none;
     list-style: none;
     background: none;
     border: none;
     padding: 0;
     margin: 0;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -82,19 +85,19 @@ nav {
       transition: 0.1s; }
     nav ul li:nth-of-type(4n+1) {
       background: #03040E;
-      color: #F4F5E4;
+      color: #F4F4F4;
       margin-left: auto;
       margin-right: auto; }
     nav ul li:nth-of-type(4n+2) {
       background: #152182;
-      color: #F4F5E4;
+      color: #F4F4F4;
       margin-left: 50%; }
     nav ul li:nth-of-type(4n+3) {
       background: #C21B11;
-      color: #F4F5E4;
+      color: #F4F4F4;
       margin-right: 25%; }
     nav ul li:nth-of-type(4n+4) {
-      background: #F4F5E4;
+      background: #F4F4F4;
       color: #03040E;
       margin-left: 50%; }
   nav #mobile {
@@ -104,7 +107,6 @@ div {
   min-height: 100%;
   margin-left: 27%; }
   div * {
-    background: #F4F5E4;
     border: 5px solid #03040E;
     margin: 5px 0px;
     padding: 5px; }
@@ -112,6 +114,9 @@ div {
     margin-top: 50px; }
 
 #edito {
+  position: relative;
+  margin-left: 5%;
+  margin-right: 27%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -123,7 +128,7 @@ div {
     margin-bottom: 20px;
     padding: 10px 25px;
     background: #152182;
-    color: #F4F5E4;
+    color: #F4F4F4;
     box-shadow: 10px 10px #03040E; }
   #edito p {
     margin-right: 25%;
@@ -133,6 +138,7 @@ div {
     text-indent: 50px; }
 
 #realisations {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -143,7 +149,7 @@ div {
     margin-right: auto;
     padding: 10px 25px;
     background: #C21B11;
-    color: #F4F5E4;
+    color: #F4F4F4;
     margin-bottom: 20px;
     box-shadow: -10px 10px #03040E; }
   #realisations section {
@@ -160,7 +166,7 @@ div {
     #realisations article h2 {
       padding: 10px 25px;
       background: #152182;
-      color: #F4F5E4;
+      color: #F4F4F4;
       text-align: center; }
     #realisations article h4 {
       padding: 10px 15px;
@@ -229,15 +235,17 @@ div {
           color: inherit; }
     #cv section #competences button {
       background: #152182;
-      color: #F4F5E4; }
+      color: #F4F4F4; }
+    #cv section #competences p {
+      background: #F4F4F4; }
     #cv section #professionnel button {
       background: #C21B11;
-      color: #F4F5E4; }
+      color: #F4F4F4; }
     #cv section #professionnel h4 {
       border: 5px solid #03040E;
       width: 75%;
       text-align: center;
-      background: #F4F5E4;
+      background: #F4F4F4;
       color: #03040E; }
     #cv section #professionnel .back {
       width: 100%;
@@ -247,12 +255,12 @@ div {
       font-weight: bold; }
     #cv section #formation button {
       background: #03040E;
-      color: #F4F5E4; }
+      color: #F4F4F4; }
     #cv section #formation h4 {
       border: 5px solid #03040E;
       width: 75%;
       text-align: center;
-      background: #F4F5E4;
+      background: #F4F4F4;
       color: #03040E; }
     #cv section #formation .back {
       width: 100%;
@@ -266,7 +274,7 @@ div {
       width: 75%;
       text-align: center;
       background: #03040E;
-      color: #F4F5E4;
+      color: #F4F4F4;
       margin-top: 0;
       margin-bottom: 0; }
     #cv section #loisirs .back {
@@ -274,7 +282,7 @@ div {
       padding-top: 0;
       padding-bottom: 0;
       width: 100%;
-      background: #F4F5E4; }
+      background: #F4F4F4; }
 
 #contact {
   display: flex;
@@ -294,14 +302,16 @@ div {
     margin-left: 5%;
     margin-right: 5%; }
     #contact form input {
-      cursor: text; }
+      cursor: text;
+      background: #F4F4F4; }
     #contact form fieldset * {
       margin: 10px 20px;
       padding: 5px 20px; }
     #contact form fieldset:last-of-type textarea {
       width: 100%;
       box-shadow: none;
-      cursor: text; }
+      cursor: text;
+      background: #F4F4F4; }
     #contact form fieldset:last-of-type textarea:hover {
       box-shadow: 5px 5px #03040E;
       transition: 0.1s; }
@@ -332,16 +342,22 @@ div {
     #contact ul li:first-of-type {
       margin-right: 25px;
       float: left;
-      color: #F4F5E4;
+      color: #F4F4F4;
       background: #C21B11; }
     #contact ul li:last-of-type {
       margin-right: 25px;
-      color: #F4F5E4;
+      color: #F4F4F4;
       background: #152182; }
 
 @media all and (orientation: portrait) {
+  body {
+    max-width: 100%; }
+
   * {
     max-width: 100%; }
+
+  #realisations, #edito {
+    position: static; }
 
   nav {
     position: static;
@@ -387,7 +403,8 @@ div {
     margin-right: 5%; }
 
   #edito {
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+    margin-right: 0; }
 
   #realisations article {
     width: 100%; } }
