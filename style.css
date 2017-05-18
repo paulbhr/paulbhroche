@@ -16,12 +16,20 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background: #F4F4F4; }
+  background: #F4F4F4;
+  overflow-x: hidden; }
 
 a {
   text-decoration: none;
   cursor: pointer; }
 
+.boxShadowRight {
+  box-shadow: 10px 10px #03040E; }
+
+.boxShadowLeft {
+  box-shadow: -10px 10px #03040E; }
+
+/* SPECIFIC SETTINGS */
 nav {
   position: fixed;
   background: #F4F4F4;
@@ -35,7 +43,8 @@ nav {
   align-items: center;
   text-align: justify;
   padding: 5px;
-  padding-left: 1%; }
+  padding-left: 2%;
+  padding-right: 2%; }
   nav * {
     border: 5px solid #03040E;
     margin: 5px 0px;
@@ -59,12 +68,15 @@ nav {
   nav h1 {
     background: #C21B11;
     color: #F4F4F4;
-    margin-right: auto; }
+    margin-right: auto;
+    margin-bottom: 15px;
+    padding: 10px 25px;
+    font-size: 2em; }
   nav h2 {
     background: #F3EC01;
     color: #03040E;
     font-size: 1.1em;
-    margin-bottom: 50px; }
+    margin-bottom: 25px; }
   nav ul {
     width: 100%;
     display: none;
@@ -76,8 +88,10 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow-x: visible;
     margin-bottom: 5px; }
     nav ul li {
+      font-weight: bold;
       cursor: pointer;
       padding: 5px 20px; }
     nav ul li:hover {
@@ -150,8 +164,7 @@ div {
     padding: 10px 25px;
     background: #C21B11;
     color: #F4F4F4;
-    margin-bottom: 20px;
-    box-shadow: -10px 10px #03040E; }
+    margin-bottom: 20px; }
   #realisations section {
     display: flex;
     flex-wrap: wrap;
@@ -191,8 +204,7 @@ div {
     margin-right: 5%;
     padding: 10px 25px;
     background: #F3EC01;
-    margin-bottom: 20px;
-    box-shadow: 10px 10px #03040E; }
+    margin-bottom: 20px; }
   #cv section {
     margin-left: 5%;
     margin-right: 15%;
@@ -209,15 +221,18 @@ div {
           border: none; }
       #cv section article .back {
         margin: 0;
+        margin-top: 5px;
         padding: 0;
-        background: #152182;
-        border: none; }
+        background: #F4F4F4; }
         #cv section article .back p {
           text-align: right;
           padding-right: 20px;
-          border: 5px solid #03040E;
+          padding-top: 7px;
+          padding-bottom: 7px;
+          margin-top: 0;
+          margin-bottom: 0;
           font-size: 0.7em;
-          color: #152182;
+          color: #F4F4F4;
           font-weight: bold; }
       #cv section article ul {
         display: none; }
@@ -236,8 +251,10 @@ div {
     #cv section #competences button {
       background: #152182;
       color: #F4F4F4; }
+    #cv section #competences .back {
+      border: 5px solid #03040E; }
     #cv section #competences p {
-      background: #F4F4F4; }
+      background: #152182; }
     #cv section #professionnel button {
       background: #C21B11;
       color: #F4F4F4; }
@@ -295,8 +312,7 @@ div {
     margin-right: auto;
     margin-bottom: 20px;
     padding: 10px 25px;
-    border: 5px solid #03040E;
-    box-shadow: -10px 10px #03040E; }
+    border: 5px solid #03040E; }
   #contact form {
     border: none;
     margin-left: 5%;

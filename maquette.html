@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Paul Roche - Développeur Web Junior</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type ="text/css" href="animate.css">
   <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script src="https://use.fontawesome.com/acd6178220.js"></script>
@@ -16,17 +17,17 @@
     <h1>Paul Roche</h1>
     <h2>Développeur Web Junior</h2>
     <ul id="web">
-      <li><a href="#edito">Accueil</a></li>
-      <li><a href="#realisations">Réalisations</a></li>
-      <li><a href="#cv">Curriculum Vitae</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li onclick="scrollto('edito')">Accueil</li>
+      <li onclick="scrollto('realisations')">Réalisations</li>
+      <li onclick="scrollto('cv')">Curriculum Vitae</li>
+      <li onclick="scrollto('contact')">Contact</li>
     </ul>
     <ul id="mobile">
       <li ng-click="menu=!menu">Menu</li>
-      <li ng-show="menu" ng-click="menu=!menu"><a href="#edito">Accueil</a></li>
-      <li ng-show="menu" ng-click="menu=!menu"><a href="#realisations">Réalisations</a></li>
-      <li ng-show="menu" ng-click="menu=!menu"><a href="#cv">Curriculum Vitae</a></li>
-      <li ng-show="menu" ng-click="menu=!menu"><a href="#contact">Contact</a></li>
+      <li ng-show="menu" ng-click="menu=!menu" onclick="scrollto('edito')">Accueil</li>
+      <li ng-show="menu" ng-click="menu=!menu" onclick="scrollto('realisations')">Réalisations</li>
+      <li ng-show="menu" ng-click="menu=!menu" onclick="scrollto('cv')">Curriculum Vitae</li>
+      <li ng-show="menu" ng-click="menu=!menu" onclick="scrollto('contact')">Contact</li>
     </ul>
   </nav>
 
@@ -40,13 +41,13 @@
   <div id="realisations">
     <h1>Réalisations</h1>
     <section>
-      <article ng-click="pokemain=!pokemain">
+      <article ng-click="pokemain=!pokemain" onclick="article(this)">
         <img src="../pokemain/gallery/logo.png" alt="preview">
         <h2>Pokémain</h2>
         <h4>Pierre/Papier/Ciseaux : attrapez-les tous!</h4>
         <p ng-show="pokemain">Lorem ipsum test. Pellentesque lorem lorem, tincidunt nec purus vitae, malesuada blandit neque. Suspendisse sodales lacus orci, cursus sodales ipsum sagittis ut. Proin efficitur congue risus vitae blandit. Nullam efficitur, libero nullam.</p>
       </article>
-      <article ng-click="workbiche=!workbiche">
+      <article ng-click="workbiche=!workbiche" onclick="article(this)">
         <img src="logo.png" alt="preview">
         <h2>Work Biche!</h2>
         <h4>Une To-Do List simple et intuitive.</h4>
@@ -59,7 +60,7 @@
     <h1>Curriculum Vitae</h1>
     <section>
       <article id="competences">
-        <button ng-click="comp=!comp" onclick="progress()">
+        <button ng-click="comp=!comp" onclick="progress(this)">
           Compétences <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
         </button>
         <div class="content" ng-show="comp">
@@ -90,7 +91,7 @@
       </article>
 
       <article id="professionnel">
-        <button class="accordéon" ng-click="parcpro=!parcpro">
+        <button ng-click="parcpro=!parcpro" onclick="slidein(this)">
           Parcours Professionnel <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
         </button>
         <div class="content" ng-show="parcpro">
@@ -106,7 +107,7 @@
       </article>
 
       <article id="formation">
-        <button class="accordéon" ng-click="formation=!formation">
+        <button ng-click="formation=!formation" onclick="slidein(this)">
           Formation <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
         </button>
         <div class="content" ng-show="formation">
@@ -128,7 +129,7 @@
       </article>
 
       <article id="loisirs">
-        <button class="accordéon" ng-click="divers=!divers">
+        <button ng-click="divers=!divers" onclick="slidein(this)">
           Loisirs <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
         </button>
         <div class="content" ng-show="divers">
