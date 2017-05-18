@@ -9,7 +9,7 @@ function scroll() {
   let offsetLeft = document.getElementById('nav').offsetLeft;
 
 
-  if (navposition <= 0)
+  /*if (navposition <= 0)
   {
       document.getElementById('nav').style.right = "";
       document.getElementById('nav').style.left = 0;
@@ -23,11 +23,15 @@ function scroll() {
       document.getElementById('nav').style.left = "";
       document.getElementById('nav').style.right = ""+fast+"px";
       document.getElementById('edito').style.right = ""+fast+"px";
-  }
+  }*/
 
   if ((document.getElementById('realisations').offsetLeft + document.getElementById('realisations').offsetWidth) <= document.body.offsetWidth && window.scrollY > document.body.offsetHeight)
   {
     document.getElementById('realisations').style.right = ""+0+"px";
+    document.getElementById('nav').style.right = "";
+    document.getElementById('nav').style.left = 0;
+    document.getElementById("web").style.display = "flex";
+    document.getElementById("nav").className = "animated fadeInLeft";
   }
   else {
     document.getElementById('realisations').style.right = ""+(x - document.body.offsetHeight)+"px";
@@ -36,6 +40,7 @@ function scroll() {
     document.getElementById('nav').style.left = "";
     document.getElementById('nav').style.right = ""+fast+"px";
     document.getElementById('edito').style.right = ""+fast+"px";
+    document.getElementById("nav").className = "";
   }
 
   console.log(document.body.offsetHeight);
