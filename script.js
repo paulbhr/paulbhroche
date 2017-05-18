@@ -1,14 +1,15 @@
 window.onscroll = function() {scroll()};
 
 function scroll() {
-  let position = (document.getElementById('nav').offsetLeft - window.scrollX);
-  console.log(position);
-  let x = document.documentElement.scrollTop;
+  let navposition = (document.getElementById('nav').offsetLeft - window.scrollX);
+  let realposition = (document.getElementById('realisations').offsetTop - window.scrollY);
+  let x = window.scrollY;
   let fast = (x*2+25);
-  let comingin = (x-700);
+  let comingin = (document.body.offsetHeight);
   let offsetLeft = document.getElementById('nav').offsetLeft;
 
-  if (document.body.scrollTop > 470 || document.documentElement.scrollTop > 470)
+
+  if (navposition <= 0)
   {
       document.getElementById('nav').style.right = "";
       document.getElementById('nav').style.left = 0;
@@ -24,14 +25,21 @@ function scroll() {
       document.getElementById('edito').style.right = ""+fast+"px";
   }
 
-  if (comingin < 0)
+  if ((document.getElementById('realisations').offsetLeft + document.getElementById('realisations').offsetWidth) <= document.body.offsetWidth && window.scrollY > document.body.offsetHeight)
   {
-    document.getElementById('realisations').style.right = ""+comingin+"px";
+    document.getElementById('realisations').style.right = ""+0+"px";
   }
-  else
-  {
-    document.getElementById('realisations').style.right = 0;
+  else {
+    document.getElementById('realisations').style.right = ""+(x - document.body.offsetHeight)+"px";
+    document.getElementById("web").style.display = "none";
+    document.getElementById("web").className = "";
+    document.getElementById('nav').style.left = "";
+    document.getElementById('nav').style.right = ""+fast+"px";
+    document.getElementById('edito').style.right = ""+fast+"px";
   }
+
+  console.log(document.body.offsetHeight);
+  console.log(window.scrollY)
 
   let title = document.getElementsByTagName('h1');
 
