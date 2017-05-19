@@ -13,9 +13,9 @@
 
 <body>
   <nav id="nav">
-    <img src="logo.png">
-    <h1>Paul Roche</h1>
-    <h2>Développeur Web Junior</h2>
+    <img src="logo.png" id="logo">
+    <h1 onclick="bisou()">Paul Roche</h1>
+    <h2 onclick="bisou()">Développeur Web Junior</h2>
     <ul id="web">
       <li onclick="scrollto('edito')">Accueil</li>
       <li onclick="scrollto('realisations')">Réalisations</li>
@@ -41,17 +41,42 @@
   <div id="realisations">
     <h1>Réalisations</h1>
     <section>
-      <article ng-click="pokemain=!pokemain" onclick="article(this)">
-        <img src="../pokemain/gallery/logo.png" alt="preview">
-        <h2>Pokémain</h2>
-        <h4>Pierre/Papier/Ciseaux : attrapez-les tous!</h4>
-        <p ng-show="pokemain">Lorem ipsum test. Pellentesque lorem lorem, tincidunt nec purus vitae, malesuada blandit neque. Suspendisse sodales lacus orci, cursus sodales ipsum sagittis ut. Proin efficitur congue risus vitae blandit. Nullam efficitur, libero nullam.</p>
+      <article>
+        <img src="../pokemain/gallery/logo.png" alt="preview" ng-click="pokemain=!pokemain" onclick="article(this)">
+        <h2 ng-click="pokemain=!pokemain" onclick="article(this)">Pokémain</h2>
+        <h4 ng-click="pokemain=!pokemain" onclick="article(this)">Pierre/Papier/Ciseaux : attrapez-les tous! <i class="fa fa-chevron-circle-down" aria-hidden="true"></i></h4>
+        <p ng-show="pokemain">
+          Projet d'initiation au Javascript, Pokémain offre la possibilité à l'utilisateur de jouer contre l'ordinateur à une version revisitée du Pierre/Papier/Ciseaux, en 5 manches, avec sauvegarde du score en cours et du meilleur score de l'utilisateur. Intuitif, les règles sont détaillées sur un panneau global, avec un rappel au survol de chaque Pokémon.
+          <br>
+          <img src="gallery/pokemainindex.png">
+          <br>
+          <b>Codes utilisés</b> : HTML, CSS (responsive), Javascript.
+          <br>
+          <b>En cours</b> : migration vers AngularJS, UX amélioriée.
+          <br>
+          <b>Perspectives</b> : ajout de mini-jeux supplémentaires à débloquer en fonction du meilleur score acquis.
+          <br>
+          <a href="https://github.com/paulbhr/pokemain">Code source</a>, <a href="https://paulbhr.github.io/pokemain/">Lien</a>
+        </p>
       </article>
-      <article ng-click="workbiche=!workbiche" onclick="article(this)">
-        <img src="workbiche_logo.png" alt="preview">
-        <h2>Work Biche!</h2>
-        <h4>Une To-Do List simple et intuitive.</h4>
-        <p ng-show="workbiche">Lorem ipsum test. Pellentesque lorem lorem, tincidunt nec purus vitae, malesuada blandit neque. Suspendisse sodales lacus orci, cursus sodales ipsum sagittis ut. Proin efficitur congue risus vitae blandit. Nullam efficitur, libero nullam.</p>
+      <article>
+        <img src="workbiche_logo.png" alt="preview" ng-click="workbiche=!workbiche" onclick="article(this)">
+        <h2 ng-click="workbiche=!workbiche" onclick="article(this)">Work Biche!</h2>
+        <h4 ng-click="workbiche=!workbiche" onclick="article(this)">Une To-Do List simple et intuitive. <i class="fa fa-chevron-circle-down" aria-hidden="true"></i></h4>
+        <p ng-show="workbiche">
+          <img src="gallery/workbichelogin.png">
+          Projet de mi-formation, cet outil permet d'organiser vos tâches à venir par catégorie, priorité et temps estimé au sein de divers espaces de travail. Simple et intuitif, les données sont stockées sur serveur à travers trois tables liées et dépendantes d'un compte utilisateur (authentification à deux facteurs). Espaces de travail et tâches peuvent être édités/supprimés par l'utilisateur à tout moment.
+          <br>
+          <img src="gallery/workbicheindex.png">
+          <br>
+          <b>Codes utilisés</b> : HTML, Sass/CSS (responsive), PHP, SQL, AngularJS. Architecture MVC.
+          <br>
+          <b>En cours</b> : UX amélioriée, ajout de nouvelles fonctions (rappel de la somme des tâches par espaces de travail).
+          <br>
+          <b>Perspectives</b> : ajout d'un panneau pour organiser un "sprint" regroupant des tâches de différents espaces de travail.
+          <br>
+          <a href="https://github.com/paulbhr/workbiche">Code source</a>
+        </p>
       </article>
     </section>
   </div>
@@ -162,13 +187,35 @@
       </fieldset>
     </form>
     -->
-    <!--<img src="logorond.svg">-->
+
+    <!--<svg version="1.1" id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    	 width="1000px" height="1000px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+    <g>
+    	<rect x="180" y="19.231" width="40" height="721.154"/>
+    	<path d="M799.999,1000c-11.046,0-20-8.61-20-19.231V268.623L487.196,34.004c-8.485-6.799-9.632-18.926-2.561-27.085
+    		s19.683-9.261,28.168-2.462l307.195,246.15v730.161C819.999,991.39,811.045,1000,799.999,1000z"/>
+    	<path d="M350.001,879.807c-3.893,0-7.761-1.092-11.096-3.23c-5.564-3.566-8.906-9.571-8.906-16.001V139.423
+    		c0-7.462,4.489-14.25,11.517-17.415c7.028-3.165,15.325-2.136,21.287,2.642l300,240.384c5.373,4.305,8.017,10.997,6.972,17.647
+    		c-1.045,6.65-5.627,12.292-12.083,14.878L388.161,505.545l274.643,220.066c5.373,4.305,8.017,10.997,6.972,17.647
+    		s-5.627,12.292-12.083,14.878l-300,120.192C355.219,879.319,352.604,879.807,350.001,879.807z M370,541.059v290.672l241.839-96.891
+    		L370,541.059z M370,180.482v290.672l241.839-96.891L370,180.482z"/>
+    	<path d="M500,1000c-11.045,0-20-8.61-20-19.231V639.423h-0.287L480,259.601l40,0.028v341.332h279.729c11.046,0,20,8.61,20,19.231
+    		c0,10.621-8.954,19.231-20,19.231H520v341.346C520,991.39,511.046,1000,500,1000z"/>
+    	<path d="M487.196,995.542l-300-240.385c-4.56-3.654-7.196-9.066-7.196-14.773V19.231c0-7.462,4.489-14.25,11.517-17.415
+    		c7.027-3.165,15.325-2.135,21.287,2.642l300,240.385c5.373,4.305,8.017,10.997,6.972,17.647
+    		c-1.045,6.65-5.627,12.292-12.083,14.878L220,392.628v338.749l292.804,234.618L487.196,995.542z M220,60.289v290.673
+    		l241.839-96.891L220,60.289z"/>
+    </g>
+  </svg>-->
 
     <ul>
       <a href="mailto:paulbh.roche@gmail.com"><li>Mail</li></a>
       <a href="https://github.com/paulbhr"><li>Github</li></a>
       <a href="https://www.linkedin.com/in/paul-roche-a74265142/"><li>LinkedIn</li></a>
     </ul>
+    <p>Réalisé avec Sass, Javascript, AngularJS.</p>
+    <p>Animations Fade-In / Fade-Out : <a href="https://daneden.github.io/animate.css/">Animate.CSS</a>. Font: <a href="https://fonts.google.com/specimen/Muli">Muli</a>.<p>
+    <p>Logos, autres animations (Javascript, CSS) : Paul Roche. <a href="https://github.com/paulbhr/paulbhroche">Code source</a></p>
   </div>
 </body>
 <script src="script.js"></script>

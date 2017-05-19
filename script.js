@@ -43,9 +43,6 @@ function scroll() {
     document.getElementById("nav").className = "";
   }
 
-  console.log(document.body.offsetHeight);
-  console.log(window.scrollY)
-
   let title = document.getElementsByTagName('h1');
 
   for(i=0; i < title.length; i+=2) {
@@ -69,6 +66,9 @@ function scroll() {
     }
   }
 }
+
+
+
 
 function progress(element) {
   element.nextElementSibling.className = "animated fadeInRight"
@@ -113,4 +113,8 @@ function article(element) {
 function scrollto(id) {
   let element = document.getElementById(id);
   element.scrollIntoView();
+}
+
+function bisou() {
+  alert("😘");
 }

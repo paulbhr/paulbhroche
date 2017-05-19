@@ -59,7 +59,7 @@ nav {
     flex: 2;
     max-height: 50%;
     object-fit: contain;
-    padding: 0px 10px;
+    padding: 5px 10px;
     border: 10px solid #03040E;
     margin-bottom: 10px;
     margin-left: auto; }
@@ -168,6 +168,10 @@ div {
     background: #C21B11;
     color: #F4F4F4;
     margin-bottom: 20px; }
+  #realisations i {
+    border: none;
+    background: inherit;
+    color: inherit; }
   #realisations section {
     display: flex;
     flex-wrap: wrap;
@@ -194,7 +198,25 @@ div {
       object-fit: contain; }
     #realisations article p {
       padding: 10px 25px;
-      text-indent: 50px; }
+      cursor: default; }
+      #realisations article p b {
+        border: none;
+        margin: 0;
+        padding: 0;
+        cursor: default; }
+      #realisations article p a {
+        border: none;
+        margin: 0;
+        padding: 0;
+        text-decoration: underline;
+        font-weight: bold; }
+      #realisations article p img {
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        border: none;
+        cursor: default; }
 
 #cv {
   display: flex;
@@ -317,6 +339,11 @@ div {
     margin-bottom: 20px;
     padding: 10px 25px;
     border: 5px solid #03040E; }
+  #contact svg {
+    border: none;
+    flex: 1;
+    max-width: 40%;
+    margin-bottom: 25px; }
   #contact form {
     border: none;
     margin-left: 5%;
@@ -346,21 +373,44 @@ div {
       transition: 0.1s; }
   #contact ul {
     align-self: center;
-    border: none; }
+    border: none;
+    margin-bottom: 25px; }
     #contact ul a {
       border: none;
       background: inherit;
       color: inherit;
       font-weight: bold; }
     #contact ul li {
+      list-style: none;
       background: #152182;
       color: #F4F4F4;
-      display: inline;
+      text-align: center;
       cursor: pointer;
-      padding: 5px 20px; }
+      padding: 5px 20px;
+      font-size: 1.5em; }
+    #contact ul a:nth-of-type(1) li {
+      background: #F3EC01;
+      color: #03040E; }
+    #contact ul a:nth-of-type(2) li {
+      background: #C21B11;
+      color: #F4F4F4; }
+    #contact ul a:nth-of-type(3) li {
+      background: #152182;
+      color: #F4F4F4; }
     #contact ul li:hover {
       box-shadow: -5px 5px #03040E;
       transition: 0.1s; }
+  #contact p {
+    border: none;
+    padding: 0;
+    margin: 0;
+    opacity: 0.7;
+    font-size: 0.7em; }
+    #contact p a {
+      border: none;
+      text-decoration: underline; }
+  #contact p:last-of-type {
+    margin-bottom: 25px; }
 
 @media all and (orientation: portrait) {
   body {
