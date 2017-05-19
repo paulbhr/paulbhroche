@@ -1,6 +1,5 @@
 .sass-cache
-logoriginal.jpg
-style.css.map
-style.scss
-logocadre.png
-*.svg
+style/style.css.map
+style/style.scss
+gallery/logocadre.png
+gallery/*.svg

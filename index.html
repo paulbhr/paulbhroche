@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Paul Roche - Développeur Web Junior</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type ="text/css" href="animate.css">
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <link rel="stylesheet" type ="text/css" href="style/animate.css">
   <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script src="https://use.fontawesome.com/acd6178220.js"></script>
@@ -13,7 +13,7 @@
 
 <body>
   <nav id="nav">
-    <img src="logo.png" id="logo">
+    <img src="gallery/logo.png" id="logo">
     <h1 onclick="bisou()">Paul Roche</h1>
     <h2 onclick="bisou()">Développeur Web Junior</h2>
     <ul id="web">
@@ -34,7 +34,7 @@
   <div id="edito">
     <h1>À Propos</h1>
     <p id="editop">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut aliquet dolor, sit amet facilisis est. Sed vel eleifend nisl. Ut luctus mi arcu, id tincidunt arcu dictum eget. Praesent eget augue aliquam, sagittis risus ac, ultrices sapien. Ut ac elit mauris. Aliquam dui arcu, facilisis faucibus arcu sit amet, dictum volutpat sapien. Suspendisse cursus, lorem mollis suscipit ultricies, velit sapien tempor enim, eget pharetra neque ex eget eros. Nunc vitae iaculis mauris, vel porttitor diam. Vivamus et blandit est. Etiam accumsan efficitur tellus, et euismod lacus porta nec. Nam tincidunt, ligula at volutpat molestie, magna erat tincidunt ligula, sed ullamcorper sem urna et elit. Ut ac tempus mauris. Praesent nec erat nisi. Nulla ullamcorper vel sem sit amet sodales. Pellentesque lorem lorem, tincidunt nec purus vitae, malesuada blandit neque. Suspendisse sodales lacus orci, cursus sodales ipsum sagittis ut. Proin efficitur congue risus vitae blandit. Nullam efficitur, libero nullam.
+      Mon attrait pour le développement se base sur un plaisir à faire face à des challenges et résoudre des problèmes, techniques comme créatifs, pour proposer des solutions personnalisées et réfléchies autour des missions confiées. Je cherche aujourd'hui à mettre à profit mes capacités, en PHP mais également sur les autres langages, étudiés et acquis à valeur égale. 
     </p>
   </div>
 
@@ -42,7 +42,7 @@
     <h1>Réalisations</h1>
     <section>
       <article>
-        <img src="../pokemain/gallery/logo.png" alt="preview" ng-click="pokemain=!pokemain" onclick="article(this)">
+        <img src="gallery/pokemain_logo.png" alt="preview" ng-click="pokemain=!pokemain" onclick="article(this)">
         <h2 ng-click="pokemain=!pokemain" onclick="article(this)">Pokémain</h2>
         <h4 ng-click="pokemain=!pokemain" onclick="article(this)">Pierre/Papier/Ciseaux : attrapez-les tous! <i class="fa fa-chevron-circle-down" aria-hidden="true"></i></h4>
         <p ng-show="pokemain">
@@ -60,7 +60,7 @@
         </p>
       </article>
       <article>
-        <img src="workbiche_logo.png" alt="preview" ng-click="workbiche=!workbiche" onclick="article(this)">
+        <img src="gallery/workbiche_logo.png" alt="preview" ng-click="workbiche=!workbiche" onclick="article(this)">
         <h2 ng-click="workbiche=!workbiche" onclick="article(this)">Work Biche!</h2>
         <h4 ng-click="workbiche=!workbiche" onclick="article(this)">Une To-Do List simple et intuitive. <i class="fa fa-chevron-circle-down" aria-hidden="true"></i></h4>
         <p ng-show="workbiche">
@@ -159,7 +159,7 @@
         </button>
         <div class="content" ng-show="divers">
           <div class="back"><h4>Musique</h4></div>
-            <p>Pratique du piano (5 ans) et de la guitare (7 ans), musique classique, rock & BO de films. <br> Expérience en DJing avec Traktor (disco, pop) et production avec Ableton Live.</p>
+            <p>Pratique du piano (5 ans) et de la guitare (7 ans), musique Classique, Rock & BO de films. <br> Expérience avec Traktor (Disco, Pop) et production avec Ableton Live (Nightcore).</p>
           <br>
           <div class="back"><h4>Rédaction Web</h4></div>
             <p>Musicale (Les Tambours.com), depuis 2014, et Séries TV (Spin-Off.fr, de 2009 à 2011).</p>
@@ -218,5 +218,5 @@
     <p>Logos, autres animations (Javascript, CSS) : Paul Roche. <a href="https://github.com/paulbhr/paulbhroche">Code source</a></p>
   </div>
 </body>
-<script src="script.js"></script>
+<script src="style/script.js"></script>
 </html>
