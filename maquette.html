@@ -13,7 +13,7 @@
 
 <body>
   <nav id="nav">
-    <img src="logoplaceholder.jpg">
+    <img src="logo.png">
     <h1>Paul Roche</h1>
     <h2>Développeur Web Junior</h2>
     <ul id="web">
@@ -48,7 +48,7 @@
         <p ng-show="pokemain">Lorem ipsum test. Pellentesque lorem lorem, tincidunt nec purus vitae, malesuada blandit neque. Suspendisse sodales lacus orci, cursus sodales ipsum sagittis ut. Proin efficitur congue risus vitae blandit. Nullam efficitur, libero nullam.</p>
       </article>
       <article ng-click="workbiche=!workbiche" onclick="article(this)">
-        <img src="logo.png" alt="preview">
+        <img src="workbiche_logo.png" alt="preview">
         <h2>Work Biche!</h2>
         <h4>Une To-Do List simple et intuitive.</h4>
         <p ng-show="workbiche">Lorem ipsum test. Pellentesque lorem lorem, tincidunt nec purus vitae, malesuada blandit neque. Suspendisse sodales lacus orci, cursus sodales ipsum sagittis ut. Proin efficitur congue risus vitae blandit. Nullam efficitur, libero nullam.</p>
@@ -145,7 +145,8 @@
 
   <div id="contact">
     <h1>Contact</h1>
-    <form action="mailto:paulbh.roche@gmail.com" method="post">
+    <!-- V2 PHP
+    <form action="mailing.php" method="post">
       <fieldset>
         <input type="text" name="nom" placeholder="Nom">
         <input type="text" name="prenom" placeholder="Prénom">
@@ -160,9 +161,13 @@
         <input type="submit" name="send" value="Envoyer">
       </fieldset>
     </form>
+    -->
+    <!--<img src="logorond.svg">-->
+
     <ul>
-      <li><a href="https://github.com/paulbhr">Github</a></li>
-      <li><a href="https://www.linkedin.com/in/paul-roche-a74265142/">LinkedIn</a></li>
+      <a href="mailto:paulbh.roche@gmail.com"><li>Mail</li></a>
+      <a href="https://github.com/paulbhr"><li>Github</li></a>
+      <a href="https://www.linkedin.com/in/paul-roche-a74265142/"><li>LinkedIn</li></a>
     </ul>
   </div>
 </body>

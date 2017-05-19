@@ -56,16 +56,18 @@ nav {
     color: inherit;
     font-weight: bold; }
   nav img {
-    height: 275px;
-    width: 175px;
-    padding: 0;
-    margin-top: 0;
-    margin-left: auto;
-    border: 10px solid; }
+    flex: 2;
+    max-height: 50%;
+    object-fit: contain;
+    padding: 0px 10px;
+    border: 10px solid #03040E;
+    margin-bottom: 10px;
+    margin-left: auto; }
   nav h1, nav h2 {
     text-align: center;
     padding: 5px 15px; }
   nav h1 {
+    flex: 0;
     background: #C21B11;
     color: #F4F4F4;
     margin-right: auto;
@@ -73,11 +75,12 @@ nav {
     padding: 10px 25px;
     font-size: 2em; }
   nav h2 {
+    flex: 0;
     background: #F3EC01;
     color: #03040E;
-    font-size: 1.1em;
-    margin-bottom: 25px; }
+    font-size: 1.1em; }
   nav ul {
+    flex: 1;
     width: 100%;
     display: none;
     list-style: none;
@@ -243,6 +246,7 @@ div {
       #cv section article button {
         text-align: center;
         font-weight: bold;
+        font-size: 1em;
         cursor: pointer; }
         #cv section article button i {
           border: none;
@@ -341,29 +345,22 @@ div {
       box-shadow: 5px 5px #03040E;
       transition: 0.1s; }
   #contact ul {
-    align-self: flex-end;
+    align-self: center;
     border: none; }
+    #contact ul a {
+      border: none;
+      background: inherit;
+      color: inherit;
+      font-weight: bold; }
     #contact ul li {
+      background: #152182;
+      color: #F4F4F4;
       display: inline;
       cursor: pointer;
       padding: 5px 20px; }
-      #contact ul li a {
-        border: none;
-        background: inherit;
-        color: inherit;
-        font-weight: bold; }
     #contact ul li:hover {
       box-shadow: -5px 5px #03040E;
       transition: 0.1s; }
-    #contact ul li:first-of-type {
-      margin-right: 25px;
-      float: left;
-      color: #F4F4F4;
-      background: #C21B11; }
-    #contact ul li:last-of-type {
-      margin-right: 25px;
-      color: #F4F4F4;
-      background: #152182; }
 
 @media all and (orientation: portrait) {
   body {
