@@ -412,6 +412,9 @@ div {
   #contact p:last-of-type {
     margin-bottom: 25px; }
 
+@media print {
+  body {
+    background-color: blue; } }
 @media all and (orientation: portrait) {
   body {
     max-width: 100%; }

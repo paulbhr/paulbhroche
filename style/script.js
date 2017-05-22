@@ -1,12 +1,9 @@
 window.onscroll = function() {scroll()};
 
 function scroll() {
-  let navposition = (document.getElementById('nav').offsetLeft - window.scrollX);
-  let realposition = (document.getElementById('realisations').offsetTop - window.scrollY);
   let x = window.scrollY;
   let fast = (x*2+25);
-  let comingin = (document.body.offsetHeight);
-  let offsetLeft = document.getElementById('nav').offsetLeft;
+
 
 
   /*if (navposition <= 0)
@@ -65,6 +62,7 @@ function scroll() {
       title[i].classList.remove("boxShadowRight");
     }
   }
+
 }
 
 
